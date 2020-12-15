@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 from snake import Snake 
 from food import Food
+from score import Score
 import time  # to add delays
 
 
@@ -12,6 +13,7 @@ screen.tracer(0)    # stops tracing anything and won't display anthing on screen
  
 snake = Snake()
 food = Food()
+score = Score()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -28,4 +30,8 @@ while game_is_on:
     snake.move()
 
     # Detech collision with food
+    if snake.head.distance(food) < 15:    # we check if snake and food's distance to detect collision
+        food.refresh()
+        score.updateScore()
+
 screen.exitonclick()
