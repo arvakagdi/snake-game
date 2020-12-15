@@ -1,6 +1,8 @@
 from turtle import Turtle
+import random
 
 STARTING_POSITIONS  = [(0,0), (-20,0), (-40,0)]
+COLORS = ['white', 'pink', 'lavender', 'light yellow', 'ivory', 'dark sea green', 'powder blue', 'pale goldenrod', 'thistle']
 MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270
@@ -15,11 +17,19 @@ class Snake:
 
     def create_snake(self):
         for position in STARTING_POSITIONS:  # setting up intial 3 blocks of snake
-            segment = Turtle('square')
-            segment.color("white")
-            segment.penup()
-            segment.goto(position)
-            self.segments.append(segment)
+            self.addSegment(position)
+
+    def extend(self):
+        self.addSegment(self.segments[-1].position())  # add an extra seg to the last pos
+
+    def addSegment(self, position):
+        segment = Turtle('circle')
+        segment.color(random.choice(COLORS))
+        segment.penup()
+        segment.goto(position)
+        self.segments.append(segment)
+
+
         
     def move(self):
         for num in range(len(self.segments) - 1, 0, -1):   

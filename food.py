@@ -1,12 +1,12 @@
 from turtle import Turtle
 import random
 
-COLORS = ['cyan', 'white', 'pink', 'purple', 'blue', 'green', 'yellow']
+COLORS = ['white', 'pink', 'purple', 'blue', 'green', 'yellow','firebrick', 'navy', 'gainsboro', 'maroon', 'goldenrod', 'deep pink', 'dark goldenrod']
 
 class Food(Turtle):
     def __init__(self):
         super().__init__()
-        self.shape('circle')
+        self.shape('turtle')
         self.penup()
         self.shapesize(stretch_len=0.5,stretch_wid=0.5)
         # self.color('cyan')
