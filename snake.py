@@ -2,7 +2,7 @@ from turtle import Turtle
 import random
 
 STARTING_POSITIONS  = [(0,0), (-20,0), (-40,0)]
-COLORS = ['white', 'pink', 'lavender', 'light yellow', 'ivory', 'dark sea green', 'powder blue', 'pale goldenrod', 'thistle']
+COLORS = ['white', 'pink', 'lavender', 'light yellow', 'ivory', 'dark sea green', 'powder blue', 'pale goldenrod', 'thistle', 'light blue', 'light slate gray', 'burlywood', 'violet']
 MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270

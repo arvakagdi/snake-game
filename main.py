@@ -7,7 +7,7 @@ import time  # to add delays
 
 screen = Screen()
 screen.setup(width = 600, height = 600)   # size of screen
-screen.bgcolor("pale turquoise")
+screen.bgcolor("maroon")
 screen.title("My Snake Game")
 screen.tracer(0)    # stops tracing anything and won't display anthing on screen until we have screen update
  
@@ -36,7 +36,7 @@ while game_is_on:
         score.updateScore()
     
     # Detect collision with walls
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
         game_is_on = False
         score.gameOver()
 
