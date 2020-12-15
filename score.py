@@ -18,3 +18,7 @@ class Score(Turtle):
         self.clear()
         self.write(f'Score: {self.CurrScore}', False, align = ALIGHMENT, font = FONT)
         self.CurrScore += 1
+
+    def gameOver(self):
+        self.goto((0,0))
+        self.write("GAME OVER", False, align=ALIGHMENT,font=FONT) 
