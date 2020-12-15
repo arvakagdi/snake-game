@@ -17,5 +17,5 @@ Rules:
 2. Do not touch the boundaries
 3. Do not touch any part of the snake's body
 
-![snake](Snakegame.png)
+<img src="Snakegame.png" width="500" height="500">
 
